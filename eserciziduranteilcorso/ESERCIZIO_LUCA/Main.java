@@ -13,6 +13,7 @@ public class Main {
 		//Methods.data(29, 2);
 		//Methods.testAddizione(1, 2, 1, true);
 		Methods.operazione(1, 2, 3,'+', true);
+		System.out.println("Sono bravo!!!");
 	}
 
 }
