@@ -14,6 +14,7 @@ public class Main {
 		//Methods.testAddizione(1, 2, 1, true);
 		Methods.operazione(1, 2, 3,'+', true);
 		System.out.println("Sono bravo!!!");
+		System.out.println("Prova");
 	}
 
 }
