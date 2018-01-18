@@ -2,6 +2,14 @@ package fondamentidiinformatica.array;
 
 public class Array {
 	
+	public static void somma(int[] numeri){
+		int somma = 0;
+		for(int i = 0; i<numeri.length; i++){
+			//somma = somma + numeri[i];
+			somma += numeri[i];
+		}
+		System.out.println(somma);
+	}
 	
 	public static int ricercaLineare(int []sequenzaDisordinata, int numeroDaTrovare) {
 		

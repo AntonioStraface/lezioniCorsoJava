@@ -2,10 +2,10 @@ package fondamentidiinformatica.stringhe;
 
 public class Stringhe {
 	
-	public static int occorrenze(String parola, char a) {
+	public static int occorrenze(String parola, char lettera) {
 		int occorrenze = 0;
 		for(int i =0; i<parola.length(); i++) {
-			if(parola.charAt(i) == a) {
+			if(parola.charAt(i) == lettera) {
 				occorrenze ++;
 			} 
 		}	

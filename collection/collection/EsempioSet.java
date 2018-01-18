@@ -1,7 +1,6 @@
 package collection.collection;
 
 import java.util.Iterator;
-import java.util.LinkedHashSet;
 import java.util.TreeSet;
 
 public class EsempioSet {

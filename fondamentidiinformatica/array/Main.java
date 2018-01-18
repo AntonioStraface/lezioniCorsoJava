@@ -7,7 +7,8 @@ class Main {
 		System.out.println(Array.ricercaLineare(a,7));
 		
 		int b[] = {1,5,7,13};
-		System.out.println(Array.ricercaBinaria(b,7));
+		//System.out.println(Array.ricercaBinaria(b,7));
+		Array.somma(b);
 		
 		int c[] = Array.sommaArray(b,7);		
 		System.out.println(Array.fakeToString(c));
