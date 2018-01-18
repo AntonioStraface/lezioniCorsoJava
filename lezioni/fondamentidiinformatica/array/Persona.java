@@ -4,7 +4,7 @@ package lezioni.fondamentidiinformatica.array;
 	String nome,cognome;
 	
 	public Persona() {
-		nome = "";
+		nome ="";
 		cognome ="";
 	}
 	

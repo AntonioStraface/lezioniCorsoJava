@@ -6,7 +6,7 @@ class Main {
 		String parola = "ciccio";
 		System.out.println(Stringhe.occorrenze(parola, 'c'));
 		
-		String parolaBis = "antonio  straface";		
+		String parolaBis = "antonio-straface-giovani-e-belli";		
 		System.out.println(Stringhe.capitalizeString(parolaBis));
 	}
 
