@@ -4,6 +4,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		int casuale = (int)(Math.random()*6);
+		
+		System.out.println(casuale);
 		Punto p1 = new Punto();
 		Punto p2 = new Punto(1,2,3);
 		Punto p3 = p2;
@@ -19,6 +23,11 @@ public class Main {
 		studente=professore;
 		studente.nome="Marco";
 		System.out.println(professore.nome);
+		Libro geronimo = new Libro();
+		Libro iorobot = new Libro("Asimov","io Robot",245, 2005);
+		geronimo.titolo = "le fantastiche avventure";
+		Computer asus= new Computer("asus","ikea",1000,8);
+		
 	}
 	
 }

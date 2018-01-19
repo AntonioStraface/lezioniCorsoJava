@@ -3,6 +3,23 @@ package lezioni.fondamentidiinformatica.matrici;
 class Matrice {
 	
 	
+	
+	public static boolean ricercaLineareMatrice(int [][] matrice, int x){
+		for (int i = 0; i < matrice.length; i++) {
+			for (int j = 0; j < matrice[i].length; j++) {
+//				if (matrice[i][j]==x) return true;
+				return matrice[i][j]==x;
+			}
+		}
+		return false;
+	}
+	
+	
+	
+	
+	
+	
+	
 	public static int sommadiagonale(int matrice [][]) {
 		int somma = 0;
 		

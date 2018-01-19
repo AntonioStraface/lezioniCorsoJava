@@ -7,6 +7,9 @@ class Main {
 		System.out.println(Matrice.sommadiagonale(a));
 		System.out.println(Matrice.fakeToString(a));
 		System.out.println(Matrice.fakeToString(Matrice.trasposta(a)));
+		
+		
+		System.out.println(Matrice.ricercaLineareMatrice(a, 4));
 	}
 
 }
