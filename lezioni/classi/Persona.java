@@ -1,18 +1,18 @@
 package lezioni.classi;
 
- class Persona {
-	String nome,cognome;
+class Persona {
+	String nome, cognome;
 	int eta;
-	
+
 	public Persona() {
 		nome = "";
-		cognome ="";
+		cognome = "";
 		eta = 0;
 	}
-	
+
 	public Persona(String n, String cn, int et) {
-	 nome = n;
-	 cognome = cn;
-	 eta = et;
+		nome = n;
+		cognome = cn;
+		eta = et;
 	}
 }

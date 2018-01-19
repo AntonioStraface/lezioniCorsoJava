@@ -112,7 +112,7 @@ public class Metodi
 	
 	public static void testSottrazione(int a, int b, int c, boolean test)
 	{
-		int sottrazione = a-b;
+		int sottrazione = a - b;
 		
 		System.out.println(a + " - " + b + " = " + sottrazione);
 		
@@ -126,7 +126,7 @@ public class Metodi
 	
 	public static void testAddizione(int a, int b, int c, boolean test)
 	{
-		int addizione = a+b;
+		int addizione = a + b;
 		
 		System.out.println(a + " + " + b + " = " + addizione);
 		
