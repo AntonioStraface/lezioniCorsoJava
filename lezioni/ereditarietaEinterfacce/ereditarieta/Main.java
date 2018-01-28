@@ -3,7 +3,7 @@ package lezioni.ereditarietaEinterfacce.ereditarieta;
 public class Main {
 
 	public static void main (String[] args) {
-		CalciatoreJuve cj = new CalciatoreJuve();
+		Attaccante cj = new Attaccante();
 		cj.setNome("Giovanni");
 		cj.setCognome("barbagianni");
 	}
