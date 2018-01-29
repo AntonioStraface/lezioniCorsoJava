@@ -1,8 +1,11 @@
 package eserciziduranteilcorso.finemodulo1;
 
+import java.sql.Array;
+import java.util.Arrays;
+
 public class Vocale
 {
-
+	/*
 	public static void vocale (char [] arrayV, String caratteri)
 	{
 		int [] contatore	= contaCarattere(arrayV,caratteri);
@@ -12,9 +15,11 @@ public class Vocale
 		System.out.println("La lettera più comune è: "+lettera+".");
 
 	}
+	
+	
 	public static int[] contaCarattere(char [] arrayV, String caratteri)
 	{
-		int [] occorrenze = new int[caratteri.length()];
+		
 		
 		for (int i=0;i<arrayV.length;i++)
 		{
@@ -28,7 +33,7 @@ public class Vocale
 		}
 		return occorrenze;
 	}
-	
+	*/
 	public static int maggiore(int [] contatore)
 	{
 		int posizione=-1, occorrenze=0;
@@ -43,4 +48,9 @@ public class Vocale
 		}
 		return posizione;
 	}
+
+
+
+	
+
 }
