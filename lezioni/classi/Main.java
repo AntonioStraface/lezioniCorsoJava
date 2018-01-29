@@ -26,8 +26,17 @@ public class Main {
 		Libro geronimo = new Libro();
 		Libro iorobot = new Libro("Asimov","io Robot",245, 2005);
 		geronimo.titolo = "le fantastiche avventure";
+		Computer notebook = new Computer();
+		notebook.setCosto(100);		
 		Computer asus= new Computer("asus","ikea",1000,8);
 		
+		// 29.01.2018
+		Persona impiegato1 = new Persona("Pinco", "Pallino", 20);
+		Persona impiegato2 = new Persona("Pinco", "Pallino", 20);
+		Persona impiegato3 = impiegato1;
+		
+		// Senza override di equals, controlla l'indirizzo
+		System.out.print(impiegato1.equals(impiegato3));
 	}
 	
 }

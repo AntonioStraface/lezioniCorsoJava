@@ -1,6 +1,7 @@
 package lezioni.classi;
 
 class Persona {
+	// Attributi
 	String nome, cognome;
 	int eta;
 
