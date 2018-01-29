@@ -17,12 +17,12 @@ public class Main {
 		System.out.println("Punto 3:" +  " x:" + p3.x + " y:" + p3.y + " z:" + p3.z);
 		Persona studente = new Persona ();
 		Persona professore = new Persona("Debora", "Bruno", 27);
-		studente.nome="Antonio";
-		studente.cognome="straface";
-		studente.eta=35;
+		studente.setNome("Antonio");
+		studente.setCognome("straface");
+		studente.setEta(35);
 		studente=professore;
-		studente.nome="Marco";
-		System.out.println(professore.nome);
+		studente.setNome("Marco");
+		System.out.println(professore.getNome());
 		Libro geronimo = new Libro();
 		Libro iorobot = new Libro("Asimov","io Robot",245, 2005);
 		geronimo.titolo = "le fantastiche avventure";

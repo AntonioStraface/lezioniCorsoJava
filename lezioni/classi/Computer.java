@@ -1,6 +1,7 @@
 package lezioni.classi;
 
 public class Computer {
+	 
 	 private String marca, produttore;
 	 private int costo, ram;
 
