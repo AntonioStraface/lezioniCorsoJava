@@ -28,7 +28,7 @@ public class Main {
 		geronimo.titolo = "le fantastiche avventure";
 		Computer notebook = new Computer();
 		notebook.setCosto(100);		
-		Computer asus= new Computer("asus","ikea",1000,8);
+		//Computer asus= new Computer("asus","ikea",1000,8);
 		
 		// 29.01.2018
 		Persona impiegato1 = new Persona("Pinco", "Pallino", 20);
@@ -41,7 +41,11 @@ public class Main {
 		System.out.println(impiegato1.toString());
 		System.out.println(impiegato1.equals(impiegato2));
 		
+		// TEST EQUALS DI PUNTO
+		Punto pnt1 = new Punto(1, 2, 3);
+		Punto pnt2 = new Punto(1, 2, 3);
 		
+		System.out.println("\nEQ. PUNTO: "+pnt1.equals(pnt2));
 	}
 	
 }
