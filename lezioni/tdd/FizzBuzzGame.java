@@ -15,7 +15,7 @@ public class FizzBuzzGame {
 	public String getString() {
 		
 		if ( (numero%5)==0
-				&&(numero%3)==0 ) {
+				&&(numero%3)==0) {
 			return "FizzBuzz";
 		}
 		
