@@ -13,7 +13,7 @@ public class Methods {
 			for(int i = 0; i < risultato.length; i++) {
 				for(int j = 0; j < matrice [i].length; j++) {
 					risultato[i] += matrice[i][j] * array[i];
-				}
+				}\
 			}
 		}
 		return risultato;

@@ -32,13 +32,16 @@ public class Main {
 		
 		// 29.01.2018
 		Persona impiegato1 = new Persona("Pinco", "Pallino", 20);
-		Persona impiegato2 = new Persona("Pinco", "Pallino", 20);
+		Persona impiegato2 = new Persona("Pinco", "Pallino",20);
 		Persona impiegato3 = impiegato1;
 		
 		// Senza override di equals, controlla l'indirizzo
 		//System.out.print(impiegato1.equals(impiegato3));
 		
 		System.out.println(impiegato1.toString());
+		System.out.println(impiegato1.equals(impiegato2));
+		
+		
 	}
 	
 }

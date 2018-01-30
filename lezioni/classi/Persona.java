@@ -2,7 +2,7 @@ package lezioni.classi;
 
 class Persona {
 	// Attributi
-	private String nome, cognome, cf;
+	private String nome, cognome, indirizzo;
 	private int eta;
 
 	public Persona() {
@@ -11,11 +11,11 @@ class Persona {
 		eta = 0;
 	}
 
-	public Persona(String nome, String cognome, int eta, String cf) {
+	public Persona(String nome, String cognome, int eta, String indirizzo) {
 		this.setNome(nome);
 		this.setCognome(cognome);
 		this.setEta(eta);
-		this.setCF(cf);
+		this.setIndirizzo(indirizzo);
 	}
 	
 	public Persona(String nome, String cognome, int eta) {
@@ -32,8 +32,8 @@ class Persona {
 		return eta;
 	}
 	
-	public String getCF() {
-		return cf;
+	public String getIndirizzo() {
+		return indirizzo;
 	}
 	
 	public void setEta(int eta){
@@ -54,17 +54,25 @@ class Persona {
 		}
 	}
 	
-	public void setCF(String cf) {
-		this.cf = cf;
+	public void setIndirizzo(String indirizzo) {
+		this.indirizzo = indirizzo;
 	}
 	
 
 	
 	@Override
 	public String toString() {
-	 	String valore = "nome: " + this.getNome() + " cognome: " + this.getCognome() + " età: " + this.getEta() + " cf: " + this.getCF();
+		String valore = "nome: " + this.getNome() + " cognome: " + this.getCognome() + " età: " + this.getEta() + " indirizzo: " + this.getIndirizzo();
 	 	return valore;	
 	}
 	
-	
+
+	public boolean equals(Persona individuo1) {
+		return (this.nome.equals(individuo1.getNome())
+			&& this.cognome.equals(individuo1.getCognome())
+			&& this.eta == individuo1.getEta()
+			&& this.indirizzo.equals(individuo1.getIndirizzo()));
+
+		
+	}
 }
