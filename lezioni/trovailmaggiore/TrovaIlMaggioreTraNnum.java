@@ -15,7 +15,6 @@ public class TrovaIlMaggioreTraNnum {
 				temp = array[i];
 		}
 		return temp;
-		
 	}
 
 }
