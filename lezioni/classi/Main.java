@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		/*
 		int casuale = (int)(Math.random()*6);
 		
 		//System.out.println(casuale);
@@ -44,8 +44,11 @@ public class Main {
 		// TEST EQUALS DI PUNTO
 		Punto pnt1 = new Punto(1, 2, 3);
 		Punto pnt2 = new Punto(1, 2, 3);
+		*/
 		
-		System.out.println("\nEQ. PUNTO: "+pnt1.equals(pnt2));
+		Libro i = new Libro("Asimov","io Robot",245, 2005);
+		i.setAnno(19998);
+		System.out.println(i.getAnno());
 	}
 	
 }
