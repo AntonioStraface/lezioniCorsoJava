@@ -10,17 +10,9 @@ public class PoligonoTest {
 	// test 3 lati
 	public void test3lati() {
 		Triangolo pl = new Triangolo();
-		pl.setLati(3);
-		assert (pl.getLati() == 3);
+		pl.setLati(4);
+		assert (pl.getLati() == 4);
 	}
 
-	@Test
-	// test 2 lati
-	public void test2lati() {
-		Triangolo pl2 = new Triangolo();
-		pl2.setLati(2);
-		assert (pl2.getLati() == -1);
-
-	}
-
+	
 }
