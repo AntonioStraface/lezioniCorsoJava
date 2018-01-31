@@ -7,12 +7,17 @@ import org.junit.Test;
 public class PoligonoTest {
 
 	@Test
-	// test 3 lati
-	public void test3lati() {
-		Triangolo pl = new Triangolo();
-		pl.setLati(4);
-		assert (pl.getLati() == 4);
+	public void testPerimetro(){
+		Triangolo t1 = new Triangolo();
+		
+		int [] lato = new int[] {1,2,3};
+		
+		t1.setLati(lato);
+		
+		assert(t1.perimetro() == 6);
+		
 	}
+
 
 	
 }
