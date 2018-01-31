@@ -2,9 +2,10 @@ package eserciziduranteilcorso.poligono;
 
 public class Triangolo extends Poligono {
 	public final static int nlati = 3;
-	int [] lati;
+	
 	
 	public Triangolo() {
+		int [] lati = super.getLati();
 		lati = new int [nlati];
 	}
 	
@@ -16,18 +17,9 @@ public class Triangolo extends Poligono {
 
 	}
 	
-	public void setLati(int [] lati) {
-		this.lati=lati;
-	}
 
-	@Override
-	public int perimetro() {
-		int somma = 0;
-		for(int i = 0; i< lati.length; i++) {
-			somma += lati[i];
-		}
-		return somma;
-	}
+	
+
 	
 	
 
