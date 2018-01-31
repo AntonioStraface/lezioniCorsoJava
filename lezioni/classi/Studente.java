@@ -1,11 +1,16 @@
 package lezioni.classi;
 
+import java.util.regex.Pattern;
+
 public class Studente extends Persona{
   private String titoloStudio;
+  int matricola;
+  private static final String REGEX="\\d{1,7}";
   
   public Studente(String nome, String cognome, int eta, String indirizzo) {
 	  super(nome, cognome, eta, indirizzo);
-	  setTitoloStudio(); 
+	  setTitoloStudio();
+	  
   }
   
   private void setTitoloStudio() {
@@ -27,6 +32,18 @@ public class Studente extends Persona{
 	
   }
   
+  private boolean checkMatricola(String mat) {
+	  return (Pattern.matches(REGEX, mat));
+  }
+  
+  public void setMatricola(int m) {
+	  if (checkMatricola(Integer.toString(m))) matricola=m;
+	  else matricola=-1;
+  }
+  
+  public int getMatricola() {
+	  return matricola;
+  }
   
   public String getTitoloStudio() {
 	  return titoloStudio;

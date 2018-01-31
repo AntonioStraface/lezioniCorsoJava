@@ -6,9 +6,17 @@ import org.junit.Test;
 
 public class TestStudente {
 	
-	public void testScuola(int eta, String scuola) {
-		Studente ciccio = new Studente("debora", "bruno", eta, "via Carracci");
+	Studente ciccio;
+	
+	public void testScuola(int eta, String scuola) {	
+		ciccio = new Studente("debora", "bruno", eta, "via Carracci");
 		assert(ciccio.getTitoloStudio().equals(scuola));
+	}
+	
+	private void testMatricola(int matricola,int value) {
+		ciccio= new Studente("adsfdsf", "akfjnbbadifb", 10, "asdsad");
+		ciccio.setMatricola(matricola);
+		assert(ciccio.getMatricola()==value);
 	}
 
 	@Test
@@ -36,4 +44,15 @@ public class TestStudente {
 	public void testAltro() {
 		testScuola(30, "altro");
 	}
+	
+	@Test
+	public void testMatricolaVerificata() {
+		testMatricola(1000,1000);
+	}
+	
+	@Test
+	public void testMatricolaErrata() {
+		testMatricola(100000000,-1);
+	}
+	
 }
