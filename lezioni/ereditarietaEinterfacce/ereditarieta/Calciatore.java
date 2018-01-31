@@ -7,6 +7,10 @@ public class Calciatore {
 		System.out.println("Sono un Calciatore");
 	}
 	
+	public Calciatore(String nome,String cognome,String ruolo) {
+			
+	}
+	
 	public String getRuolo() {
 		return ruolo;
 	}
