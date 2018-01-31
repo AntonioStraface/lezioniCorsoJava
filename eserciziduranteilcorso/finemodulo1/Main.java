@@ -13,6 +13,12 @@ public class Main {
 				'a', 'o', 'e', 'i', 'u'
 		};
 		
-		System.out.println(Motodi.mostCaratteri(prova, caratteri));
+		int[][] matrice = { {1,2,3}, {4,5,6}, {7,8,9} };
+		
+		int[] array = {1,2,3};
+		int [] arrayRisultato = new int [array.length];
+		arrayRisultato = Methods.moltiplicazioneMatriceArray(matrice, array);
+		Methods.stampaArray(arrayRisultato);
+		//System.out.println(Motodi.mostCaratteri(prova, caratteri));
 	}
 }

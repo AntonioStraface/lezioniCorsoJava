@@ -13,14 +13,14 @@ public class Fizzbuzz {
 	}
 
 	public String playTheGame() {		
-        	if (((number % 5) == 0) && ((number % 3) == 0)) // Is it a multiple of 5 & 7?
+        	if (((number % 5) == 0) 
+        			&& ((number % 3) == 0)) 
                 return "FizzBuzz";
-            if (number % 3 == 0) // When i is divisible by 3, then print "Fizz"
+        	else if (number % 3 == 0) 
                 return "Fizz";
-            else if (number % 5 == 0) // When i is not divisible by 3 but is divisible by 5, then print "Buzz"
+            else if (number % 5 == 0) 
                 return "Buzz";
-            
-            return "no Buzz";
+            return Integer.toString(number);
     }
 	
 }

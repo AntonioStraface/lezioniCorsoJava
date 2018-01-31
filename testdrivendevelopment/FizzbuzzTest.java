@@ -7,7 +7,7 @@ class FizzbuzzTest {
 	private void runFizzBuzz(int number, String expected) {
 		Fizzbuzz fb = new Fizzbuzz();
 		fb.setNumber(number);
-		assert (fb.playTheGame().compareTo(expected) == 0);
+		assert (fb.playTheGame().equals(expected));
 	}
 
 	@Test
