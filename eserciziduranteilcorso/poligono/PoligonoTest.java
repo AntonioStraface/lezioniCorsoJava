@@ -7,37 +7,42 @@ import org.junit.Test;
 public class PoligonoTest {
 
 	@Test
-	public void testPerimetro(){
-		
+	public void testPerimetro() {
+
 		Triangolo t1 = new Triangolo();
-		
-		int [] lati = new int[] {1,2,3};
-		
+
+		int[] lati = new int[] { 1, 2, 3 };
+
 		t1.setLati(lati);
-		
-		assert(t1.perimetro() == 6);
-		
+
+		assert (t1.perimetro() == 6);
+
 	}
-	
+
 	@Test
 	public void testPerimetroRettangolo() {
-		
+
 		Rettangolo r1 = new Rettangolo();
-		int [] lati1 = new int[] {2,4,2,4};
+		int[] lati1 = new int[] { 2, 4, 2, 4 };
 		r1.setLati(lati1);
-		assert(r1.perimetro() == 12);
-		
-		
+		assert (r1.perimetro() == 12);
+
 	}
-	
+
 	@Test
 	public void testAreaTriangolo() {
 		Triangolo tr1 = new Triangolo();
-		int [] lati2 = new int[] {2, 2, 2};
+		int[] lati2 = new int[] { 2, 2, 2 };
 		tr1.setLati(lati2);
-		assert(tr1.area() == Math.sqrt(3));
+		assert (tr1.area() == Math.sqrt(3));
 	}
 
+	@Test
+	public void testAreaRettangolo() {
+		Rettangolo ret1 = new Rettangolo();
+		int[] basealt = new int[] { 8, 5, 8, 5 };
+		ret1.setLati(basealt);
+		assert (ret1.area() == 40);
+	}
 
-	
 }
