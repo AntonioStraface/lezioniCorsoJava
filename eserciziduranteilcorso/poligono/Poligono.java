@@ -4,7 +4,7 @@ public abstract class Poligono {
 	
 	private int [] lati;
 	
-	public abstract void area();
+	public abstract double area();
 	
 	public int [] getLati() {
 		return lati;

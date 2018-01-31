@@ -29,6 +29,14 @@ public class PoligonoTest {
 		
 		
 	}
+	
+	@Test
+	public void testAreaTriangolo() {
+		Triangolo tr1 = new Triangolo();
+		int [] lati2 = new int[] {2, 2, 2};
+		tr1.setLati(lati2);
+		assert(tr1.area() == Math.sqrt(3));
+	}
 
 
 	
