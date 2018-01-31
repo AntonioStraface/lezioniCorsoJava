@@ -14,6 +14,8 @@ public abstract class Poligono {
 	public void setLati(int lati) {
 		if (lati >= 3) {
 			this.lati = lati;
+		} else {
+			this.lati = -1;
 		}
 	}
 }
