@@ -1,7 +1,5 @@
 package eserciziduranteilcorso.poligono;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 public class PoligonoTest {
@@ -10,11 +8,8 @@ public class PoligonoTest {
 	public void testPerimetro() {
 
 		Triangolo t1 = new Triangolo();
-
 		int[] lati = new int[] { 1, 2, 3 };
-
 		t1.setLati(lati);
-
 		assert (t1.perimetro() == 6);
 
 	}

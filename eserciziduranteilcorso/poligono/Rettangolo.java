@@ -1,12 +1,10 @@
 package eserciziduranteilcorso.poligono;
 
 public class Rettangolo extends Poligono {
-
 	public final static int nlati = 4;
-
-	public Rettangolo() {
-		int[] lati = super.getLati();
-		lati = new int[nlati];
+	
+	public Rettangolo() {	
+		super.setLati(new int [nlati]);
 	}
 
 	@Override

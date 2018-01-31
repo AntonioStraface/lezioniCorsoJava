@@ -2,10 +2,11 @@ package eserciziduranteilcorso.poligono;
 
 public abstract class Poligono {
 	
+	protected int nLati;
 	private int [] lati;
 	
 	public abstract double area();
-	
+		
 	public int [] getLati() {
 		return lati;
 	}

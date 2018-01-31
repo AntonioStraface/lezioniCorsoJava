@@ -3,14 +3,10 @@ package eserciziduranteilcorso.poligono;
 public class Triangolo extends Poligono {
 	public final static int nlati = 3;
 	
-	
-	public Triangolo() {
-		int [] lati = super.getLati();
-		lati = new int [nlati];
+	public Triangolo() {	
+		super.setLati(new int [nlati]);
 	}
-	
-	
-
+		
 	@Override
 	public double area() {
 		double semiPerimetro = (super.perimetro())/2;
@@ -23,12 +19,4 @@ public class Triangolo extends Poligono {
 		areaT = Math.sqrt(semiPerimetro*termine);	
 		return areaT;
 	}
-	
-
-	
-
-	
-	
-
-	
 }
