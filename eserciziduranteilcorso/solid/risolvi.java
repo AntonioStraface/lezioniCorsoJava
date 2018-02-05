@@ -1,9 +1,9 @@
 package eserciziduranteilcorso.solid;
 
-public class risolvi {
+public class Risolvi {
 
 	
-	public double Risolvi(String figura,int base,int basedue,int altezza) {
+	public static double areaFigura(String figura,int base,int basedue,int altezza) {
 		
 		double area = 0;
 		
