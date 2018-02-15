@@ -16,10 +16,13 @@ public class Main {
 		Alunno p4 = new Alunno("Antonio", 12);
 		Alunno eliminami = new Alunno("Antonio", 12);
 		
-		scuola.add(p1);
-		scuola.add(p2);
-		scuola.add(p3);
-		scuola.add(p4);
+		Scuola aldini = new Scuola();
+		
+		aldini.aggiungiAlunno(p1);
+		aldini.aggiungiAlunno(p2);
+		aldini.aggiungiAlunno(p3);
+		aldini.aggiungiAlunno(p4);
+		
 		
 		Iterator<Alunno> iterator = scuola.iterator();
 		
