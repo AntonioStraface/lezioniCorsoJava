@@ -4,7 +4,7 @@ public class Tavolo {
 	private int numero, numeroPosti;
 	private boolean occupato;
 	
-	public Tavolo(int numero, int numeroPosti, boolean occupato) {
+	public Tavolo(int numero, int numeroPosti) {
 		setNumero(numero);
 		setNumeroPosti(numeroPosti);
 		occupato = false;
@@ -24,5 +24,13 @@ public class Tavolo {
 	
 	public void setNumeroPosti(int numeroPosti) {
 		this.numeroPosti = numeroPosti;
+	}
+	
+	public void setOccupazione (boolean condizione) {
+		occupato = condizione;
+	}
+	
+	public boolean getOccupazione () {
+		return occupato;
 	}
 }

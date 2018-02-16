@@ -2,11 +2,11 @@ package eserciziduranteilcorso.Ristorante;
 
 public class Prenotazione {
 	private String nome;
-	private int numero;
+	private int numeroPersone;
 	
-	public Prenotazione() {
+	public Prenotazione(Ristorante ristorante , String nome, int numeroPersone) {
 		setNome(nome);
-		setNumero(numero);
+		setNumero(numeroPersone);
 	}
 
 	public String getNome() {
@@ -14,7 +14,7 @@ public class Prenotazione {
 	}
 	
 	public int getNumero() {
-		return numero;
+		return numeroPersone;
 	}
 	
 	public void setNome(String nome) {
@@ -22,7 +22,12 @@ public class Prenotazione {
 	}  
 	
 	public void setNumero(int numero) {
-		this.numero = numero;
+		this.numeroPersone = numero;
+	}
+	
+	public boolean equals (Prenotazione prenotazione2) {
+		
+		return ((nome == prenotazione2.getNome()) && (numeroPersone == prenotazione2.getNumero())); 
 	}
 	
 }
