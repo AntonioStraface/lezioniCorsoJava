@@ -1,9 +1,12 @@
-package eserciziduranteilcorso.Ristorante;
+package eserciziduranteilcorso.Ristorante.Test;
 
 import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Test;
+
+import eserciziduranteilcorso.Ristorante.File.Cliente;
+import eserciziduranteilcorso.Ristorante.File.Ristorante;
 
 public class TestRisto {
 

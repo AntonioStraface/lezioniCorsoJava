@@ -1,4 +1,4 @@
-package eserciziduranteilcorso.Ristorante;
+package eserciziduranteilcorso.Ristorante.File;
 
 public class Cliente extends Persona {
 

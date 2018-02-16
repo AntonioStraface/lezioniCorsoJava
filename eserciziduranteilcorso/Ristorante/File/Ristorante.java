@@ -1,4 +1,4 @@
-package eserciziduranteilcorso.Ristorante;
+package eserciziduranteilcorso.Ristorante.File;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
