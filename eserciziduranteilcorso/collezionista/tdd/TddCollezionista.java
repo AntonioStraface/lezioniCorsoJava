@@ -25,5 +25,11 @@ public class TddCollezionista {
 	initFilm("dijfh", "horror", -1994);
 		assert(f.getAnno() == 1994);
 	}
+	
+	@Test
+	public void testAttore() {
+	Attore williSmith = new Attore("Willi","Smith",30,29);
+	assert(williSmith.getEta() == 30);
+	}
 
 }
