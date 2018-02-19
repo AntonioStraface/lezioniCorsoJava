@@ -8,6 +8,7 @@ import org.junit.After;
 import org.junit.Test;
 
 import eserciziduranteilcorso.collezionista.Collezionista;
+import eserciziduranteilcorso.collezionista.enums.Lavoro;
 import eserciziduranteilcorso.collezionista.model.artista.*;
 import eserciziduranteilcorso.collezionista.model.classi_abstract.*;
 import eserciziduranteilcorso.collezionista.model.media.*;
@@ -94,15 +95,14 @@ public class TddCollezionista {
 		Collezionista c = new Collezionista( );
 		c.putMediaToCollection(f);
 		listaDiControllo.add(f);
-		filmReg = c.trovaMediaFromArtista(art2);
+		filmReg = c.trovaMediaFromArtista(art2,Lavoro.Regista.toString());
 
 		assert(filmReg.getLast().equals(listaDiControllo.getFirst()) );
 	}
 	
 	public void testFilmAttore() {
-		
 		Film f = new Film("Black Panther", "Fantascienza", 2018);
-		
+
 		Attore williSmith = new Attore("Willi","Smith",30,29);
 
 		f.addArtista(williSmith);

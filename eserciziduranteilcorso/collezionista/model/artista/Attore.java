@@ -11,6 +11,12 @@ public class Attore  extends Artista {
 		super(nome,cognome,eta,anniDesperienza);
 
 	}
-	
+
+
+	@Override
+	public String getLavoro() {
+		// TODO Auto-generated method stub
+		return Lavoro.Attore.toString();
+	}
 
 }

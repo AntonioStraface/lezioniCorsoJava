@@ -56,4 +56,9 @@ public abstract class  Artista {
 		}
 		else return false;
 	}
+	
+	
+	public abstract String getLavoro();
+	
+
 }

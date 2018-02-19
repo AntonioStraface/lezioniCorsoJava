@@ -11,5 +11,11 @@ public class Cantante extends Artista {
 	public Cantante (String nome, String cognome, int eta,int anniDesperienza) {
 		super(nome,cognome,eta,anniDesperienza);
 	}
+	
+	@Override
+	public String getLavoro() {
+		// TODO Auto-generated method stub
+		return Lavoro.Cantante.toString();
+	}
 
 }

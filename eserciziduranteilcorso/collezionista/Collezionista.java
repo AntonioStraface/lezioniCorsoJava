@@ -99,7 +99,7 @@ public class Collezionista {
 		return mediaType;
 	}
 	
-	public LinkedList<Media> trovaMediaFromArtista(Artista artista){
+	public LinkedList<Media> trovaMediaFromArtista(Artista artista,String tipoArtista){
 		String mediaType = returnTipo(artista);
 		LinkedList<Media> filmReg = new LinkedList<Media>();
 		Iterator<Media> iter = collezione.get(mediaType).iterator();
@@ -108,20 +108,8 @@ public class Collezionista {
 			Iterator<Artista> it = tmp.getListaArtisti().iterator();
 			while(it.hasNext()) {
 				Artista cont= it.next();
-				if(artista instanceof Regista && cont instanceof Regista) {
-					if(cont.equals(artista)){
-						filmReg.add(tmp);
-					}
-				}
-				else if(artista instanceof Attore && cont instanceof Attore) {
-					if(cont.equals(artista)){
-						filmReg.add(tmp);
-					}
-				}
-				else if (artista instanceof Cantante &&  cont instanceof Cantante) {
-					if(cont.equals(artista)){
-						filmReg.add(tmp);
-					}
+				if(cont.getLavoro().equals(tipoArtista) && cont.equals(artista)) {
+					filmReg.add(tmp);
 				}
 			}
 		}
