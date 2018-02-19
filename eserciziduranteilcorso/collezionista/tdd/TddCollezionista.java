@@ -31,5 +31,12 @@ public class TddCollezionista {
 	Attore williSmith = new Attore("Willi","Smith",30,29);
 	assert(williSmith.getEta() == 30);
 	}
+	
+	@Test
+	public void testSupportoFilm() {
+	Film memento = new Film("Memento","thriller",2008);
+	BluRay bluray = new BluRay(memento);
+	assert(bluray.getM().getTitolo().equals("Memento"));
+	}
 
 }
