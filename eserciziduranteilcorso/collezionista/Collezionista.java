@@ -2,8 +2,13 @@ package eserciziduranteilcorso.collezionista;
 
 import java.util.*;
 
+import eserciziduranteilcorso.collezionista.model.artista.Attore;
+import eserciziduranteilcorso.collezionista.model.artista.Cantante;
+import eserciziduranteilcorso.collezionista.model.artista.Regista;
+import eserciziduranteilcorso.collezionista.model.classi_abstract.Artista;
 import eserciziduranteilcorso.collezionista.model.classi_abstract.Media;
 import eserciziduranteilcorso.collezionista.model.media.*;
+import java.lang.reflect.*;
 
 public class Collezionista {
 	
@@ -93,4 +98,42 @@ public class Collezionista {
 		
 		return mediaType;
 	}
+	
+	public LinkedList<Media> trovaMediaFromArtista(Artista artista){
+		String mediaType = returnTipo(artista);
+		LinkedList<Media> filmReg = new LinkedList<Media>();
+		Iterator<Media> iter = collezione.get(mediaType).iterator();
+		while(iter.hasNext()) {
+			Media tmp = iter.next();
+			Iterator<Artista> it = tmp.getListaArtisti().iterator();
+			while(it.hasNext()) {
+				Artista cont= it.next();
+				if(artista instanceof Regista && cont instanceof Regista) {
+					if(cont.equals(artista)){
+						filmReg.add(tmp);
+					}
+				}
+				else if(artista instanceof Attore && cont instanceof Attore) {
+					if(cont.equals(artista)){
+						filmReg.add(tmp);
+					}
+				}
+				else if (artista instanceof Cantante &&  cont instanceof Cantante) {
+					if(cont.equals(artista)){
+						filmReg.add(tmp);
+					}
+				}
+			}
+		}
+		return filmReg;
+	}
+	
+	public String returnTipo (Artista artista) {
+		if((artista instanceof Regista) || (artista instanceof Attore))
+			return "films";
+		if(artista instanceof Cantante)
+			return "albums";
+		return null;
+	}
+	
 }

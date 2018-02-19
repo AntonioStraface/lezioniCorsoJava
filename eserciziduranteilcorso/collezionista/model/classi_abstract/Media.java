@@ -12,12 +12,12 @@ public abstract class Media {
 	private LinkedList<Artista> listaArtisti;
 	
 	public Media(String titolo, String genere, int anno, String tipoMedia) {
-	
+		listaArtisti = new LinkedList<Artista>();
 		setTitolo(titolo);
 		setGenere(genere);
 		setAnno(anno);
 		setTipoMedia(tipoMedia);
-		
+
 	}
 	
 	public void setTitolo(String titolo) {
@@ -94,4 +94,7 @@ public abstract class Media {
 		return false;
 	}
 	
+	public void addArtista(Artista artista) {
+		listaArtisti.add(artista);
+	}
 }

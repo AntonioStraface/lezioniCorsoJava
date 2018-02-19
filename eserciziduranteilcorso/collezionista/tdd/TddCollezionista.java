@@ -78,4 +78,43 @@ public class TddCollezionista {
 		
 		assert(c.searchMedia(f).equals(f));
 	}
+	
+	@Test
+	public void testFilmRegista() {
+		
+		Film f = new Film("Black Panther", "Fantascienza", 2018);
+		
+		Regista art1 = new Regista("gianni", "barbaggianni", 33,8);
+		Regista art2 = new Regista("morandi", "capelligianni", 90,1);
+		f.addArtista(art1);
+		f.addArtista(art2);
+		LinkedList<Media> filmReg = new LinkedList<Media>();
+		LinkedList<Media> listaDiControllo = new LinkedList<Media>();
+		
+		Collezionista c = new Collezionista( );
+		c.putMediaToCollection(f);
+		listaDiControllo.add(f);
+		filmReg = c.trovaMediaFromArtista(art2);
+
+		assert(filmReg.getLast().equals(listaDiControllo.getFirst()) );
+	}
+	
+	public void testFilmAttore() {
+		
+		Film f = new Film("Black Panther", "Fantascienza", 2018);
+		
+		Attore williSmith = new Attore("Willi","Smith",30,29);
+
+		f.addArtista(williSmith);
+		f.addArtista(williSmith);
+		LinkedList<Media> filmReg = new LinkedList<Media>();
+		LinkedList<Media> listaDiControllo = new LinkedList<Media>();
+		
+		Collezionista c = new Collezionista( );
+		c.putMediaToCollection(f);
+		listaDiControllo.add(f);
+		filmReg = c.trovaMediaFromArtista(williSmith);
+
+		assert(filmReg.getLast().equals(listaDiControllo.getFirst()) );
+	}
 }
