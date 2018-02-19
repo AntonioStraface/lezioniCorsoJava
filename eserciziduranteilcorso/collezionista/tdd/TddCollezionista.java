@@ -7,6 +7,7 @@ import java.util.LinkedList;
 import org.junit.After;
 import org.junit.Test;
 
+import eserciziduranteilcorso.collezionista.Collezionista;
 import eserciziduranteilcorso.collezionista.model.artista.*;
 import eserciziduranteilcorso.collezionista.model.classi_abstract.*;
 import eserciziduranteilcorso.collezionista.model.media.*;
@@ -27,35 +28,54 @@ public class TddCollezionista {
 
 	@Test
 	public void testFilmCreazione() {
-	initFilm("dijfh", "horror", -1994);
+		
+		initFilm("dijfh", "horror", -1994);
 		assert(f.getAnno() == 1994);
 	}
 	
 	@Test
 	public void testAttore() {
-	Attore williSmith = new Attore("Willi","Smith",30,29);
-	assert(williSmith.getEta() == 30);
+		
+		Attore williSmith = new Attore("Willi","Smith",30,29);
+		assert(williSmith.getEta() == 30);
 	}
 	
 	@Test
 	public void testSupportoFilm() {
-	Film memento = new Film("Memento","thriller",2008);
-	BluRay bluray = new BluRay(memento);
-	assert(bluray.getM().getTitolo().equals("Memento"));
+		
+		Film memento = new Film("Memento","thriller",2008);
+		BluRay bluray = new BluRay(memento);
+		assert(bluray.getM().getTitolo().equals("Memento"));
 	}
 	
 	@Test
 	public void testListaArtisti() {
-	Film memento = new Film("Memento","thriller",2008);
-	Attore williSmith = new Attore("Willi","Smith",30,29);
-	Regista nolan = new Regista("giorgio", "Nolan", 70,50);
-	LinkedList<Artista> lista = new LinkedList<>();
-	lista.add(nolan);
-//	lista.add(williSmith);
-	
-	memento.setListaArtisti(lista);
-	
-	assert(!memento.checkArtista(williSmith));
+		
+		Film memento = new Film("Memento","thriller",2008);
+		Attore williSmith = new Attore("Willi","Smith",30,29);
+		Regista nolan = new Regista("giorgio", "Nolan", 70,50);
+		LinkedList<Artista> lista = new LinkedList<>();
+		lista.add(nolan);
+		// lista.add(williSmith);
+		
+		memento.setListaArtisti(lista);
+		
+		assert(!memento.checkArtista(williSmith));
 	}
 
+	@Test
+	public void testCollezionista() {
+		
+		Media f = new Film("Black Panther", "Fantascienza", 2018);
+		Media a = new Album("Black Panther", "Fantascienza", 2018);
+		
+		Collezionista c = new Collezionista(
+				new String[] {"CodFisc", "Cognome", "Nome"},
+				new int[] {1997, 11, 3}
+		);
+		
+		c.putMediaToCollection(f);
+		
+		assert(c.searchMedia(f).equals(f));
+	}
 }

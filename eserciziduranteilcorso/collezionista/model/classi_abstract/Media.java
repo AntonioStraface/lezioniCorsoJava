@@ -7,7 +7,7 @@ import eserciziduranteilcorso.Collection.Alunno;
 
 public abstract class Media {
 	
-	private String titolo, genere,tipoMedia;
+	private String titolo, genere, tipoMedia;
 	private int anno;
 	private LinkedList<Artista> listaArtisti;
 	
@@ -59,6 +59,17 @@ public abstract class Media {
 	
 	public int getAnno() {
 		return anno;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+
+		Media temp = (Media) obj;
+		
+		return titolo.equals(temp.getTitolo())
+			&& genere.equals(temp.getGenere())
+			&& tipoMedia.equals(temp.getTipoMedia())
+			&& anno == temp.getAnno();
 	}
 	
 	@Override
