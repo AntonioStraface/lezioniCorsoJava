@@ -99,7 +99,7 @@ public class Collezionista {
 		return mediaType;
 	}
 	
-	public LinkedList<Media> trovaMediaFromArtista(Artista artista,String tipoArtista){
+	public LinkedList<Media> trovaMediaFromArtista(Artista artista){
 		String mediaType = returnTipo(artista);
 		LinkedList<Media> filmReg = new LinkedList<Media>();
 		Iterator<Media> iter = collezione.get(mediaType).iterator();
@@ -108,7 +108,7 @@ public class Collezionista {
 			Iterator<Artista> it = tmp.getListaArtisti().iterator();
 			while(it.hasNext()) {
 				Artista cont= it.next();
-				if(cont.getLavoro().equals(tipoArtista) && cont.equals(artista)) {
+				if(cont.equals(artista)) {
 					filmReg.add(tmp);
 				}
 			}

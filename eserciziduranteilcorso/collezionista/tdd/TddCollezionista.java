@@ -92,10 +92,10 @@ public class TddCollezionista {
 		LinkedList<Media> filmReg = new LinkedList<Media>();
 		LinkedList<Media> listaDiControllo = new LinkedList<Media>();
 		
-		Collezionista c = new Collezionista( );
+		Collezionista c = new Collezionista();
 		c.putMediaToCollection(f);
 		listaDiControllo.add(f);
-		filmReg = c.trovaMediaFromArtista(art2,Lavoro.Regista.toString());
+		filmReg = c.trovaMediaFromArtista(art2);
 
 		assert(filmReg.getLast().equals(listaDiControllo.getFirst()) );
 	}

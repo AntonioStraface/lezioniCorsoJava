@@ -1,15 +1,25 @@
 package eserciziduranteilcorso.collezionista.model.classi_abstract;
 
-public abstract class  Artista {
+public abstract class Artista {
 
-	private String nome, cognome;
+	private String nome, cognome, lavoro;
 	private int eta, anniDesperienza;
 	
-	public Artista (String nome, String cognome, int eta,int anniDesperienza) {
+	public Artista (String nome, String cognome, int eta,int anniDesperienza, String lavoro) {
 		setNome(nome);
 		setCognome(cognome);
 		setEta(eta);
 		setAnniDesperienza(anniDesperienza);
+		setLavoro(lavoro);
+	}
+	
+	private void setLavoro(String lavoro) {
+		this.lavoro = lavoro;
+	}
+	
+	
+	public String getLavoro() {
+		return this.lavoro;
 	}
 
 	public String getNome() {
@@ -49,16 +59,12 @@ public abstract class  Artista {
 		
 		if (obj instanceof Artista) {
 			Artista test = (Artista) obj;
-			if (test.getNome().equals(this.getNome()) && test.getCognome().equals(this.getCognome())) {
-				return true;
-			}
-			return false;
+			return test.getNome().equals(this.getNome()) 
+				&& test.getCognome().equals(this.getCognome())
+				&& test.getLavoro().equals(this.getLavoro());
 		}
 		else return false;
 	}
-	
-	
-	public abstract String getLavoro();
 	
 
 }
