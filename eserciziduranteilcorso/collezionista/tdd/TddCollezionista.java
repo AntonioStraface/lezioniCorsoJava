@@ -2,10 +2,15 @@ package eserciziduranteilcorso.collezionista.tdd;
 
 import static org.junit.Assert.*;
 
+import java.util.LinkedList;
+
 import org.junit.After;
 import org.junit.Test;
 
-import eserciziduranteilcorso.collezionista.model.*;
+import eserciziduranteilcorso.collezionista.model.artista.*;
+import eserciziduranteilcorso.collezionista.model.classi_abstract.*;
+import eserciziduranteilcorso.collezionista.model.media.*;
+import eserciziduranteilcorso.collezionista.model.supporti.*;
 
 public class TddCollezionista {
 
@@ -37,6 +42,20 @@ public class TddCollezionista {
 	Film memento = new Film("Memento","thriller",2008);
 	BluRay bluray = new BluRay(memento);
 	assert(bluray.getM().getTitolo().equals("Memento"));
+	}
+	
+	@Test
+	public void testListaArtisti() {
+	Film memento = new Film("Memento","thriller",2008);
+	Attore williSmith = new Attore("Willi","Smith",30,29);
+	Regista nolan = new Regista("giorgio", "Nolan", 70,50);
+	LinkedList<Artista> lista = new LinkedList<>();
+	lista.add(nolan);
+//	lista.add(williSmith);
+	
+	memento.setListaArtisti(lista);
+	
+	assert(!memento.checkArtista(williSmith));
 	}
 
 }

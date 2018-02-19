@@ -1,4 +1,4 @@
-package eserciziduranteilcorso.collezionista.model;
+package eserciziduranteilcorso.collezionista.enums;
 
 public enum Lavoro {
 

@@ -1,4 +1,6 @@
-package eserciziduranteilcorso.collezionista.model;
+package eserciziduranteilcorso.collezionista.model.classi_abstract;
+
+import eserciziduranteilcorso.collezionista.enums.TipiSupporto;
 
 public abstract class Supporto {
 	private TipiSupporto tipoSupporto;

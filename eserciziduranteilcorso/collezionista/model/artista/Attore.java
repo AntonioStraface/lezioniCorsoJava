@@ -1,4 +1,7 @@
-package eserciziduranteilcorso.collezionista.model;
+package eserciziduranteilcorso.collezionista.model.artista;
+
+import eserciziduranteilcorso.collezionista.enums.Lavoro;
+import eserciziduranteilcorso.collezionista.model.classi_abstract.Artista;
 
 public class Attore  extends Artista {
 	

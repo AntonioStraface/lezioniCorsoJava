@@ -1,4 +1,4 @@
-package eserciziduranteilcorso.collezionista.model;
+package eserciziduranteilcorso.collezionista.model.classi_abstract;
 
 public abstract class  Artista {
 
@@ -42,5 +42,18 @@ public abstract class  Artista {
 
 	public void setAnniDesperienza(int anniDesperienza) {
 		this.anniDesperienza = anniDesperienza;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		
+		if (obj instanceof Artista) {
+			Artista test = (Artista) obj;
+			if (test.getNome().equals(this.getNome()) && test.getCognome().equals(this.getCognome())) {
+				return true;
+			}
+			return false;
+		}
+		else return false;
 	}
 }

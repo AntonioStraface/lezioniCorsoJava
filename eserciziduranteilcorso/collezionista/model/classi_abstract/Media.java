@@ -1,9 +1,15 @@
-package eserciziduranteilcorso.collezionista.model;
+package eserciziduranteilcorso.collezionista.model.classi_abstract;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+import eserciziduranteilcorso.Collection.Alunno;
 
 public abstract class Media {
 	
 	private String titolo, genere,tipoMedia;
 	private int anno;
+	private LinkedList<Artista> listaArtisti;
 	
 	public Media(String titolo, String genere, int anno, String tipoMedia) {
 	
@@ -58,6 +64,23 @@ public abstract class Media {
 	@Override
 	public String toString() {
 		return "MEDIA: "+tipoMedia+"\n TITOLO: "+titolo+"\n GENERE: "+genere+"\n ANNO: "+anno;
+	}
+
+	public LinkedList<Artista> getListaArtisti() {
+		return listaArtisti;
+	}
+
+	public void setListaArtisti(LinkedList<Artista> listaArtisti) {
+		this.listaArtisti = listaArtisti;
+	}
+	
+	public Boolean checkArtista(Artista artista) {
+		Iterator<Artista> iterator = getListaArtisti().iterator();
+		
+		while(iterator.hasNext()) {
+			if(iterator.next().equals(artista)) return true;	
+		}
+		return false;
 	}
 	
 }

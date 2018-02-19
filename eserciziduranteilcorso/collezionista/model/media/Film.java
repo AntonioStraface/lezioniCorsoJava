@@ -1,4 +1,6 @@
-package eserciziduranteilcorso.collezionista.model;
+package eserciziduranteilcorso.collezionista.model.media;
+
+import eserciziduranteilcorso.collezionista.model.classi_abstract.Media;
 
 public class Film extends Media {
 	
